@@ -1,0 +1,130 @@
+        <!-- 家宅页面 -->
+        <div id="family-house-page" class="game-page hidden absolute inset-0 bg-cover bg-center flex items-center justify-center animate-fade-in">
+            <div class="panel max-w-2xl animate-slide-up">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-3xl font-bold text-primary">家宅管理</h2>
+                    <button id="btn-back-from-family-house" class="btn-secondary">
+                        <i class="fa fa-arrow-left"></i> 返回
+                    </button>
+                </div>
+
+                <div class="mb-6">
+                    <p class="mb-2">家族成员: <span id="family-house-members-count" class="font-bold">1</span> 人</p>
+                    <p class="mb-4">家族声望: <span id="family-house-reputation" class="font-bold">0</span></p>
+                </div>
+
+                <div class="grid grid-cols-1 gap-4">
+                    <button id="btn-ancestral-hall" class="btn-game flex flex-col items-center justify-center h-32">
+                        <span>祠堂</span>
+                        <span class="text-xs mt-1">(祭祖、家谱)</span>
+                    </button>
+                    <button id="btn-family-school" class="btn-game flex flex-col items-center justify-center h-32">
+                        <span>族学</span>
+                        <span class="text-xs mt-1">(求学、教学)</span>
+                    </button>
+                    <button id="btn-guest-house" class="btn-game flex flex-col items-center justify-center h-32">
+                        <span>客馆</span>
+                        <span class="text-xs mt-1">(延请先生)</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 祠堂页面 -->
+        <div id="ancestral-hall-page" class="game-page hidden absolute inset-0 bg-cover bg-center flex items-center justify-center animate-fade-in">
+            <div class="panel max-w-2xl animate-slide-up">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-3xl font-bold text-primary">祠堂</h2>
+                    <button id="btn-back-from-ancestral-hall" class="btn-secondary">
+                        <i class="fa fa-arrow-left"></i> 返回
+                    </button>
+                </div>
+
+                <div class="mb-6">
+                    <p class="mb-2">祭祖状态: <span id="ancestor-worship-status" class="font-bold">本年度未祭祖</span></p>
+                    <p class="mb-4">祭祖效果: 当年新生儿四维属性 +1%-10%</p>
+                </div>
+
+                <div class="grid grid-cols-1 gap-4">
+                    <button id="btn-worship-ancestors" class="btn-game flex flex-col items-center justify-center h-32">
+                        <span>祭祖</span>
+                        <span id="worship-cost" class="text-xs mt-1">(消耗 100两 + 10石粮)</span>
+                    </button>
+                    <button id="btn-view-family-tree" class="btn-game flex flex-col items-center justify-center h-32">
+                        <span>家谱</span>
+                        <span class="text-xs mt-1">(查看家族成员)</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 家谱页面 -->
+        <div id="family-tree-page" class="game-page hidden absolute inset-0 bg-cover bg-center flex items-center justify-center animate-fade-in">
+            <div class="panel max-w-2xl max-h-[80vh] overflow-y-auto scrollbar-thin animate-slide-up">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-3xl font-bold text-primary">家谱</h2>
+                    <button id="btn-back-from-family-tree" class="btn-secondary">
+                        <i class="fa fa-arrow-left"></i> 返回
+                    </button>
+                </div>
+
+                <div class="mb-4">
+                    <h3 class="text-xl font-bold mb-2">家族成员</h3>
+                    <div id="family-tree-list" class="space-y-2">
+                        <!-- 家族成员列表将动态生成 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 族学页面 -->
+        <div id="family-school-page" class="game-page hidden absolute inset-0 bg-cover bg-center flex items-center justify-center animate-fade-in">
+            <div class="panel max-w-2xl animate-slide-up">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-3xl font-bold text-primary">族学</h2>
+                    <button id="btn-back-from-family-school" class="btn-secondary">
+                        <i class="fa fa-arrow-left"></i> 返回
+                    </button>
+                </div>
+
+                <div class="mb-6">
+                    <p class="mb-2">族学先生: <span id="school-teacher-name" class="font-bold">暂无</span></p>
+                    <p class="mb-2">求学弟子: <span id="school-students-count" class="font-bold">0</span> 人</p>
+                    <p class="mb-4">教学效果: 弟子每月属性经验 +<span id="school-effect" class="font-bold">5</span></p>
+                </div>
+
+                <div class="grid grid-cols-1 gap-4">
+                    <button id="btn-arrange-study" class="btn-game flex flex-col items-center justify-center h-32">
+                        <span>安排求学</span>
+                        <span class="text-xs mt-1">(选择家族子弟)</span>
+                    </button>
+                    <button id="btn-arrange-teaching" class="btn-game flex flex-col items-center justify-center h-32">
+                        <span>安排教学</span>
+                        <span class="text-xs mt-1">(安排先生任教)</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 客馆页面 -->
+        <div id="guest-house-page" class="game-page hidden absolute inset-0 bg-cover bg-center flex items-center justify-center animate-fade-in">
+            <div class="panel max-w-2xl animate-slide-up">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-3xl font-bold text-primary">客馆</h2>
+                    <button id="btn-back-from-guest-house" class="btn-secondary">
+                        <i class="fa fa-arrow-left"></i> 返回
+                    </button>
+                </div>
+
+                <div class="mb-4">
+                    <h3 class="text-xl font-bold mb-2">本月游士</h3>
+                    <div id="wandering-scholars-list" class="space-y-2">
+                        <!-- 游士列表将动态生成 -->
+                    </div>
+                </div>
+
+                <div class="mt-4 text-sm text-gray-600">
+                    <p>提示: 每月自动刷新4名游士，当月没有延请，下月重新刷新。</p>
+                </div>
+            </div>
+        </div>
